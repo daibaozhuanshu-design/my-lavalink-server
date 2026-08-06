@@ -1,7 +1,11 @@
 server:
   port: 2333
   address: 0.0.0.0
+
 lavalink:
+  plugins:
+    - dependency: "com.github.lavalink-devs:youtube-plugin:1.11.0"
+      repository: "https://maven.lavalink.dev/releases"
   server:
     password: "my_secret_password"
     sources:
@@ -9,20 +13,34 @@ lavalink:
       bandcamp: true
       soundcloud: true
       twitch: true
+      vimeo: true
       http: true
       local: true
     bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    resamplingQuality: HQ
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    youtubePlaylistLoadLimit: 6
+    playerUpdateInterval: 5
     youtubeSearchEnabled: true
-    sourceRegistry:
-      - dev.lavalink.youtube.YoutubeSourceManager
-  metrics:
-    prometheus:
-      enabled: false
-  sentry:
-    dsn: ""
-  logging:
-    file:
-      path: ./logs
-    level:
-      root: INFO
-      lavalink: INFO
+    soundcloudSearchEnabled: true
+    gc-warnings: true
+
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
+
+sentry:
+  dsn: ""
+  environment: ""
+
+logging:
+  file:
+    max-history: 30
+    max-size: 1GB
+  level:
+    root: INFO
+    lavalink: INFO
