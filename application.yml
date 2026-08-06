@@ -4,8 +4,9 @@ server:
 
 lavalink:
   plugins:
-    - dependency: "com.github.lavalink-devs:youtube-plugin:1.11.2"
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.3"
       repository: "https://maven.lavalink.dev/releases"
+      snapshot: false
   server:
     password: "my_secret_password"
     sources:
