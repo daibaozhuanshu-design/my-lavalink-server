@@ -1,7 +1,4 @@
-FROM eclipse-temurin:17-jre-alpine
-
-# 安裝音訊處理所需的相依庫
-RUN apk add --no-cache libgcc
+FROM eclipse-temurin:17-jre-slim
 
 WORKDIR /opt/Lavalink
 
