@@ -4,12 +4,12 @@ server:
 
 lavalink:
   plugins:
-    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.3.0"
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.3"
       repository: "https://maven.lavalink.dev/releases"
   server:
     password: "my_secret_password"
     sources:
-      youtube: false
+      youtube: true
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -24,7 +24,7 @@ lavalink:
     useSeekGhosting: true
     youtubePlaylistLoadLimit: 6
     playerUpdateInterval: 5
-    youtubeSearchEnabled: false
+    youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
 
