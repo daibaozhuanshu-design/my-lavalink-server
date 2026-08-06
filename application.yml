@@ -36,3 +36,8 @@ plugins:
     allowSearch: true
     oauth:
       enabled: true
+
+logging:
+  level:
+    root: INFO
+    dev.lavalink.youtube.http.YoutubeOauth2Handler: INFO
