@@ -1,13 +1,16 @@
 server:
   port: 2333
   address: 0.0.0.0
+
 metrics:
   prometheus:
     enabled: true
     endpoint: /metrics
+
 sentry:
   dsn: ""
   environment: ""
+
 logging:
   file:
     max-history: 30
@@ -52,13 +55,3 @@ lavalink:
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
-
-plugins:
-  youtube:
-    enabled: true
-    allowSearch: true
-    clientId: ""
-    clientSecret: ""
-    refreshToken: ""
-    oauth:
-      enabled: false
