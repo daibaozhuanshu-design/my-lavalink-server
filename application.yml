@@ -55,3 +55,13 @@ lavalink:
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
+
+plugins:
+  youtube:
+    enabled: true
+    allowSearch: true
+    clientId: ""
+    clientSecret: ""
+    refreshToken: ""
+    oauth:
+      enabled: false
