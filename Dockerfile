@@ -1,4 +1,4 @@
-FROM amazoncorretto:17-alpine-node
+FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /opt/Lavalink
 
