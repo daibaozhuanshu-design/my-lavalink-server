@@ -1,5 +1,8 @@
 FROM eclipse-temurin:17-jre-alpine
 
+# 安裝音訊處理所需的相依庫
+RUN apk add --no-cache libgcc
+
 WORKDIR /opt/Lavalink
 
 # 下載官方最新的 Lavalink.jar
