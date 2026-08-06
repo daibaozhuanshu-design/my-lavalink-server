@@ -1,3 +1,28 @@
 server:
   port: 2333
   address: 0.0.0.0
+lavalink:
+  server:
+    password: "my_secret_password"
+    sources:
+      youtube: true
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      http: true
+      local: true
+    bufferDurationMs: 400
+    youtubeSearchEnabled: true
+    sourceRegistry:
+      - dev.lavalink.youtube.YoutubeSourceManager
+  metrics:
+    prometheus:
+      enabled: false
+  sentry:
+    dsn: ""
+  logging:
+    file:
+      path: ./logs
+    level:
+      root: INFO
+      lavalink: INFO
