@@ -6,15 +6,18 @@ lavalink:
   plugins:
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.2"
       repository: "https://maven.lavalink.dev/releases"
+
   server:
     password: "my_secret_password"
+
     sources:
-      youtube: true
+      youtube: false
       bandcamp: true
       soundcloud: true
       twitch: true
       http: true
       local: true
+
     filters:
       volume: true
       equalizer: true
@@ -26,6 +29,7 @@ lavalink:
       rotation: true
       channelMix: true
       lowPass: true
+
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
@@ -34,8 +38,13 @@ plugins:
   youtube:
     enabled: true
     allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+
     clients:
-      - WEB
       - MUSIC
-      - TVHTML5
       - ANDROID_MUSIC
+      - TVHTML5
+
+    playlistLoadingLimit: 6
+    videoLoadingTimeout: 10000
