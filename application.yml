@@ -34,3 +34,5 @@ plugins:
   youtube:
     enabled: true
     allowSearch: true
+    oauth:
+      enabled: true
